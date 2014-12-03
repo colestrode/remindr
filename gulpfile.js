@@ -85,7 +85,7 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('serve', ['wiredep', 'angularInject'], function(next) {
+gulp.task('serve', ['wiredep', 'angularInject', 'watch'], function(next) {
   var server = connect();
   server.use(connectLiveReload());
   server.use(serveStatic('www'));
